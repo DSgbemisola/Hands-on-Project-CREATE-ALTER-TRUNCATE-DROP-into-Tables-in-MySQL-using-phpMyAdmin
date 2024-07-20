@@ -53,7 +53,7 @@ TRUNCATE TABLE table_name;
 
 DROP TABLE table_name;
 
-# Task A: Creating a tables
+# Task A: Creating Tables
 
 1. Create two tables a. Table 1 - PETSALE b. Table 2 - PET
 
@@ -104,4 +104,65 @@ INSERT INTO PET VALUES
 SELECT * FROM PET;
 
 ![image](https://github.com/user-attachments/assets/5e8ede02-0d68-423d-aa55-ced1a29d819c)
+
+
+# Task B: ALTER using ADD COLUMN
+
+1. Add a new QUANTITY column to the PETSALE table and show the altered table.
+
+To add a new column called Quantity, I used the statement below:
+
+ALTER TABLE PETSALE
+ADD COLUMN QUANTITY INTEGER;
+
+SELECT * FROM PETSALE;
+
+![image](https://github.com/user-attachments/assets/6c44d020-d847-477c-9aaf-547718a60302)
+
+UPDATE PETSALE SET QUANTITY = 9 WHERE ID = 1;
+UPDATE PETSALE SET QUANTITY = 3 WHERE ID = 2;
+UPDATE PETSALE SET QUANTITY = 2 WHERE ID = 3;
+UPDATE PETSALE SET QUANTITY = 6 WHERE ID = 4;
+UPDATE PETSALE SET QUANTITY = 24 WHERE ID = 5;
+
+SELECT * FROM PETSALE;
+
+![image](https://github.com/user-attachments/assets/e4693b3d-cffc-4a78-aa87-c9436095bfcf)
+
+# Task c: ALTER using DROP COLUMN
+
+To delete the PROFIT column from the PETSALE table and show the altered table, I used the following statement:
+
+ALTER TABLE PETSALE
+DROP COLUMN PROFIT;
+
+SELECT * FROM PETSALE;
+
+![image](https://github.com/user-attachments/assets/0d0b1b9c-2b37-411b-982b-1b3d68c52355)
+
+# Task D: ALTER using ALTER COLUMN
+
+To change the data type to VARCHAR(20) type of the column PET of the table PETSALE and show the altered table, I used the following statement:
+
+ALTER TABLE PETSALE ALTER COLUMN PET TYPE VARCHAR(20);
+
+SELECT * FROM PETSALE;
+
+![image](https://github.com/user-attachments/assets/95c99d34-2016-4209-98e1-0b545331c365)
+
+# Task E: ALTER using RENAME COLUMN
+
+To rename the column PET to ANIMAL of the PETSALE table and show the altered table, I used the folowing statement:
+
+-- Rename the column from PET to ANIMAL
+ALTER TABLE PETSALE RENAME COLUMN PET TO ANIMAL;
+
+-- Change the column type to varchar(20)
+ALTER TABLE PETSALE ALTER COLUMN ANIMAL TYPE VARCHAR(20);
+
+-- Select all data from the table
+SELECT * FROM PETSALE;
+
+![image](https://github.com/user-attachments/assets/4831a878-3969-493e-85c7-8971c68ebfcc)
+
 
