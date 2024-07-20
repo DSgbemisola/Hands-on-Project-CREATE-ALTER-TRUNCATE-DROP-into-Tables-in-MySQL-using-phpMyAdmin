@@ -155,14 +155,35 @@ SELECT * FROM PETSALE;
 To rename the column PET to ANIMAL of the PETSALE table and show the altered table, I used the folowing statement:
 
 -- Rename the column from PET to ANIMAL
+
 ALTER TABLE PETSALE RENAME COLUMN PET TO ANIMAL;
 
 -- Change the column type to varchar(20)
+
 ALTER TABLE PETSALE ALTER COLUMN ANIMAL TYPE VARCHAR(20);
 
 -- Select all data from the table
+
 SELECT * FROM PETSALE;
 
 ![image](https://github.com/user-attachments/assets/4831a878-3969-493e-85c7-8971c68ebfcc)
 
+# Task F: Using the TRUNCATE statement to remove all rows from an existing table
 
+To remove all rows from the PET table and show the empty table, I used the following statement:
+
+TRUNCATE TABLE PET ;
+
+SELECT * FROM PET;
+
+![image](https://github.com/user-attachments/assets/49cea1e5-4c5f-4723-b7ab-51340a8fb8c9)
+
+# Task G: Using the DROP statement to delete an existing table
+
+To delete the PET table and verify if the table still exists or not (SELECT statement won’t work if a table doesn’t exist)
+
+DROP TABLE PET;
+
+SELECT * FROM PET;
+
+![image](https://github.com/user-attachments/assets/2930d7c9-aeb2-4fc7-a1a7-708265890c61)
